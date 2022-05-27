@@ -1,0 +1,15 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/rishabhbali/image-processing'
+printf "\e[33m\e[1mBuilding...\e[0m\n";
+mkdir -p build
+echo "  image.o from image.cpp"
+g++ -std=c++17 -g -c -o build/image.o src/image.cpp
+printf "\e[33m\e[1mBuilding...\e[0m\n";
+mkdir -p build
+echo "  main.o from main.cpp"
+g++ -std=c++17 -g -c -o build/main.o src/main.cpp
+printf "\e[35m\e[1mLinking...\e[0m\n";
+echo "  image.o main.o"
+g++ -std=c++17 -g -o "ImageProcessing" build/image.o build/main.o
+make: Leaving directory '/home/rishabhbali/image-processing'
+ 
