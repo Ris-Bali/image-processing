@@ -15,3 +15,11 @@ Lets convert the following image to grayscale :
 ![Spiderman strange](/assets/spiderman.jpg)
 
 #### 1) Average method for Conversion 
+
+In this method we take the average value of the pixel values R,G,B to get the gray-scale pixel . 
+
+grayscale = R+G+B/3
+
+The result we get is as follows : 
+
+![Gray Spidey](/assets/Average_gray.png)
