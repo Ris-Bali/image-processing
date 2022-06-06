@@ -23,3 +23,35 @@ grayscale = R+G+B/3
 The result we get is as follows : 
 
 ![Gray Spidey](/assets/Average_gray.png)
+
+Which looks good wnough but is not perfect .
+
+
+#### 2) Lightness Method for conversion
+
+In this method we take the average value of the components with highest and lowest value . i.e.
+
+grayscale          = {min(R,G,B) + max(R,G,B)} / 2
+(pixel intensity)
+
+The result we get with this method is as follows : 
+
+![Light gray](/assets/Light_gray.png)
+
+
+Which is not very accurate and actually seems to be the worst method till now. 
+
+
+#### 3) Luminosity Method for conversion 
+
+The best method is the luminosity method that successfully solves the problems of previous methods.
+
+Based on the aforementioned observations, we should take a weighted average of the components. The contribution of blue to the final value should decrease, and the contribution of green should increase. After some experiments and more in-depth analysis, researchers have concluded in the equation below:
+
+\mathbf{grayscale = 0.3 * R + 0.59 * G + 0.11 * B}
+
+Here most weight is given to green colored pixels as humans are said to percieve green light well . 
+
+![Luminous](/assets/Lum_gray.jpg)
+
+This is the best method for grayscale inversion . 
