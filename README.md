@@ -48,7 +48,7 @@ The best method is the luminosity method that successfully solves the problems o
 
 Based on the aforementioned observations, we should take a weighted average of the components. The contribution of blue to the final value should decrease, and the contribution of green should increase. After some experiments and more in-depth analysis, researchers have concluded in the equation below:
 
-\mathbf{grayscale = 0.3 * R + 0.59 * G + 0.11 * B}
+grayscale = (0.3 * R + 0.59 * G + 0.11 * B)/3
 
 Here most weight is given to green colored pixels as humans are said to percieve green light well . 
 
