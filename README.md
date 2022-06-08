@@ -55,3 +55,9 @@ Here most weight is given to green colored pixels as humans are said to percieve
 ![Luminous](/assets/Lum_gray.jpg)
 
 This is the best method for grayscale inversion . 
+
+## Flipping Images 
+
+#### Flipping image along X axis ( Horizontal Flip)
+
+![Horizontal Flip](/assets/Xflip.jpg)

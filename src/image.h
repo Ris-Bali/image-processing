@@ -38,4 +38,7 @@ Image & grayscale_avg();
 Image & grayscale_lum();
 Image & grayscale_light();
 
+Image &  flipX();
+Image & flipY();
+
 };

@@ -184,4 +184,42 @@ Image& Image::grayscale_light()
    
 }
 
+Image &Image::flipX()
+{
+    uint8_t temporaray[4];
+    uint8_t *px1;
+    uint8_t *px2;
+    for(int y=0;y<height;++y)
+    {
+        for(int x=0;x<width/2;++x)
+        {
+            px1 = &data[(x+y*width)*channels];
+            px2 = &data[((width-1-x)+y*width)*channels];
+            memcpy(temporaray,px1,channels);
+            memcpy(px1,px2,channels);
+            memcpy(px2,temporaray,channels);
+        }
+    }
+    return *this;
+}
+
+Image& Image::flipY() 
+{
+    uint8_t temporaray[4];
+    uint8_t *px1;
+    uint8_t *px2;
+    for(int x=0;x<width;++x)
+    {
+        for(int y=0;y<height/2;++y)
+        {
+            px1 = &data[(x+y*width)*channels];
+            px2 = &data[(x+(height-1-y)*width)*channels];
+            memcpy(temporaray,px1,channels);
+            memcpy(px1,px2,channels);
+            memcpy(px2,temporaray,channels);
+        }
+    }
+    return *this;
+}
+
 
