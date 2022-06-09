@@ -61,3 +61,21 @@ This is the best method for grayscale inversion .
 #### Flipping image along X axis ( Horizontal Flip)
 
 ![Horizontal Flip](/assets/Xflip.jpg)
+
+The formula used for the flip is illustrated below 
+
+![figure](/assets/flipeg.png)
+
+Here we exchange the pixels marked with similar colour . The formula used to find similar pixels is given below. 
+
+![formula](/assets/flipeg2.png)
+
+###### Here x goes till w/2 and we find the pairs by substracting from the width .
+
+#### Flip image over Y axis (vertical flip)
+
+
+Similarly the same logic is used for vertical flip and we get the following result . Here y will go till h/2.
+
+![Vertical](/assets/flipy.jpg)
+
